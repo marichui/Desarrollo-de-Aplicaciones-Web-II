@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="BD">
+		<properties>
+		<!-- jar de mysql -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<!-- cadena de conexion -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pokemon" />
+			<!-- USUARIO -->
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<!-- CLAVE -->
+			<property name="javax.persistence.jdbc.password" value="msql" />
+			<!-- JPA crea la base de datos cada vez que levanta la aplicacion -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<!-- dialecto MYSQL -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>
